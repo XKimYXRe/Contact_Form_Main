@@ -26,12 +26,31 @@ body {
     justify-content: center;
 }
 
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
 form{
     background-color:var(--White);
-    max-width: 50%;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    border-radius: 1rem;
+}
+
+form input {
+    border: 1px solid var(--Grey500);
+    width: 100%;
+    border-radius: .3rem;
+    padding: 0.5rem;
+
+}
+
+span {
+    color: var(--Green600);
 }
 
 .attribution { font-size: 11px; text-align: center; margin-top: 1rem;}
