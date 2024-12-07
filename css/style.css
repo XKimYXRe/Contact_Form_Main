@@ -1,57 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
-
-@import url('./couleurs.css');
+@import url("./couleurs.css");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-    border: none;
-    outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 body {
-    font-size: 16px;
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    background-color: var(--Green200);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--Green200);
+  color: var(--Grey900);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+small {
+    color: var(--Red);
+    display: none;
 }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
-form{
-    background-color:var(--White);
-    max-width: 40%;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    border-radius: 1rem;
+form {
+  background-color: var(--White);
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
-form input {
-    border: 1px solid var(--Grey500);
-    width: 100%;
-    border-radius: .3rem;
-    padding: 0.5rem;
-
+.query_type > div {
+    margin: 1rem 0;
 }
+
+form input, .query_type > div > div, textarea {
+  border: 1px solid var(--Grey500);
+  width: 100%;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+form input:hover, textarea:hover {
+  border-color: var(--Green600);
+}
+
+form input,textarea {
+    margin: .5rem 0;
+}
+
+textarea {
+    resize: none;
+}
+
+
+.query_type > div, .query_type > div > div, .box_consent > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.query_type > div > div {
+  padding-left: 1rem;
+}
+
+.query_type > div > div, .box_consent > div {
+    gap: .5rem;
+    align-items: center;
+}
+
+
+.btn {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--Green600);
+  border-radius: 7px;
+  color: white;
+  font-weight: 700;
+}
+
 
 span {
-    color: var(--Green600);
+  color: var(--Green600);
 }
 
-.attribution { font-size: 11px; text-align: center; margin-top: 1rem;}
-.attribution a { color: hsl(228, 45%, 44%); }
+.active {
+  background-color: var(--Green200);
+  border: 1px solid var(--Green600) !important;
+}
+
+
+
+input[type = checkbox] , input[type = radio] {
+  -webkit-appearance: none;
+  --ms-appearance:none;
+  appearance: none;
+  cursor: pointer;
+  border: 1px solid var(--Grey900);
+  height: 1rem;
+  width: 1rem;
+  position: relative;
+}
+
+input[type = checkbox] {
+  border-radius: .2rem;
+}
+
+input[type = checkbox]:checked {
+  background-color: var(--Green600);
+}
+
+input[type = checkbox]:checked::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  top: 2px;
+  left: 6px;
+  border: solid var(--White);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+input[type = radio] {
+  border-radius: 2rem;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {     
+  border-color: var(--Green600);       
+}
+
+input[type="radio"]:checked::before {
+  content: '';              
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--Green600);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
