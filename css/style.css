@@ -170,7 +170,7 @@ input[type="radio"]:checked::before {
   background-color: var(--Green600);
 }
 
-#alert-box {
+.alert-box {
   background-color: var(--Grey900);
   color: var(--White);
   width: 25rem;
@@ -179,24 +179,25 @@ input[type="radio"]:checked::before {
   border-radius: 7px;
 }
 
-#alert-box_desactive {
-  display: none;
-}
-#alert-box_active {
-  display: block;
-}
-
-#alert-box>div {
+.alert-box>div {
   display: flex;
   flex-direction: row;
   gap: .5rem;
   align-items: center;
 }
 
-#alert-box small {
+.alert-box small {
   display: block;
   color: var(--White);
   padding-top: .5rem;
+}
+
+#alert-box_desactive {
+  display: none;
+}
+
+#alert-box_active {
+  display: block;
 }
 
 .attribution {

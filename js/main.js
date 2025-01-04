@@ -11,7 +11,7 @@ const emailError = document.getElementById("email_error")
 const emailFormatError = document.getElementById("email-format_error")
 const messageError = document.getElementById("message_error")
 
-const alertBox = document.getElementById("alert-box")
+const alertBox = document.getElementById("alert-box_desactive")
 
 function isBadEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -68,6 +68,8 @@ const handlerSubmit = (event)=> {
         messageError.style.display = none
     }
     
+    
+    alertBox.setAttribute("id","alert-box_active")
     resetValue()
 
 }
