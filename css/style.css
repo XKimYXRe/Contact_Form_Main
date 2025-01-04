@@ -108,7 +108,7 @@ span {
   color: var(--Green600);
 }
 
-.active {
+#querytype-active {
   background-color: var(--Green200);
   border: 1px solid var(--Green600) !important;
 }
